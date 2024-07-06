@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Login</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/login.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="static/logo.png" alt="LOGO" class="logo-image">
+        </div>
+        <div class="title">
+            Nama Aplikasi
+        </div>
+        <div class="login-container">
+            <h2>LOGIN</h2>
+            <form action="{{url_for('login')}}" method="post">
+                <input type="text" id="email" name="email" placeholder="EMAIL OR NUMBERPHONE">
+                <input type="password" id="password" name="password" placeholder="PASSWORD">
+                <div class="button-container">
+                    <button type="submit" class="button">SIGN IN</button>
+                </div>
+            </form>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+</body>
+</html>

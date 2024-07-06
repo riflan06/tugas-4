@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profil Penjual</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/profile.css')}}">
+</head>
+<body>
+    <div class="back-button">
+        <a href="{{url_for('jual')}}" class="back-link"><</a>
+    </div>
+    <div class="container">
+        <div class="profile-picture">
+            <img src="static/profile.png" alt="Foto Penjual" class="profile-image">
+            <div class="caption">Foto Penjual</div>
+        </div>
+        <div class="profile-details">
+            <div class="profile-title">Id Penjual</div>
+            <div class="profile-info">
+                <div class="info-item">Nama</div>
+                <div class="info-item">Alamat</div>
+                <div class="info-item">No. Hp/ Email</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

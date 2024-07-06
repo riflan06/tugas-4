@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Homepage</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/beranda.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="static/logo.png" alt="LOGO" class="logo-image">
+        </div>
+        <div class="title">
+            Nama Aplikasi
+        </div>
+        <div class="button-container">
+            <!-- <button class="button" onclick="window.location.href='/jual'">JUAL</button>
+            <button class="button" onclick="window.location.href='/beli'">BELI</button> -->
+            <a class="button" href="{{url_for('jual')}}">JUAL</a>
+            <a class="button" href="{{url_for('beli')}}">BELI</a>
+        </div>
+    </div>
+</body>
+</html>
